@@ -1,0 +1,5 @@
+[MQTTExec] Connecting to MQTT Server ...
+/Users/macbook/.rvm/gems/ruby-2.4.1/bundler/gems/ruby-mqtt-8968969c50b0/lib/mqtt/client.rb:229:in `connect': No MQTT server host set when attempting to connect (RuntimeError)
+	from /Users/macbook/.rvm/gems/ruby-2.4.1/bundler/gems/ruby-mqtt-8968969c50b0/lib/mqtt/client.rb:93:in `connect'
+	from /Users/macbook/rails/Demo-MQTT-Ruby-on-Rails/exec/mqtt_exec.rb:24:in `run!'
+	from exec/mqtt_service.rb:6:in `<main>'

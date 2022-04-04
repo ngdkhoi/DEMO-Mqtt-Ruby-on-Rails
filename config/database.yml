@@ -17,9 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: postgres
+  port: 5432
+  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
 
 development:
   <<: *default
@@ -78,8 +80,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: DEMOMosquitto_production
-  username: DEMOMosquitto
-  password: <%= ENV['DEMOMOSQUITTO_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: DEMOMosquitto_production
+#   username: DEMOMosquitto
+#   password: <%= ENV['DEMOMOSQUITTO_DATABASE_PASSWORD'] %>
